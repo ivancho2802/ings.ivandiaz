@@ -5,6 +5,52 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script>
+			$(document).ready(()=>{
+				
+				var subject = "";
+				var body = "";
+				
+				document.getElementById("name").addEventListener("keydown", (e)=>{
+					console.log(e.target.value)
+					subject = e.target.value
+					reloadEmail()
+				})
+				/* document.getElementById("email") */
+				document.getElementById("message").addEventListener("keydown", (e)=>{
+					console.log(e.target.value)
+					body = e.target.value
+					reloadEmail()
+				})
+				function reloadEmail() {
+					const presubject = "?subject=Consulta%20Software%20"
+					console.log(subject)
+					var subjectE = "";
+					subjectE+=presubject
+					subjectE+=encodeURI(subject)
+
+					var bodyE = "&body=Escribe%20tu%20solicitud%20aqui"
+					if(body !==""){
+						bodyE ="&body="+ encodeURI(body)
+
+					}
+
+					var href="mailto:ings.ivandiaz@gmail.com";
+					href+=subjectE;
+					href+=bodyE;
+					//mailto:ings.ivandiaz@gmail.com?subject=Consulta%20Software&body=Escribe%20tu%20solicitud%20aqui
+
+					document.getElementById("send_smg").href=href;
+
+				}
+				loadcopy();
+			})
+
+		function loadcopy(){
+			document.getElementById("copyright").innerHTML="&copy; TIDIAZ. All rights reserved "+(new Date().getFullYear())+"."
+		}
+		</script>
 	</head>
 	<body class="is-preload">
 
@@ -15,7 +61,7 @@
 
 					<!-- Logo -->
 						<div id="logo">
-							<span class="image avatar48"><img src="images/avatar.jpg" alt="" /></span>
+							<span class="image avatar48"><img src="images/avatar.jfif" alt="" /></span>
 							<h1 id="title">Ivan Diaz</h1>
 							<p>Ingeniero de sistemas</p>
 						</div>
@@ -80,42 +126,45 @@
 							</header>
 
 							<p>Este contenido comprende proyectos que han sido autorizados para su publicación en este sitio, 
-							otros proyectos comprenden ciertas politicas de provacidad.</p>
+							otros proyectos comprenden ciertas politicas de privacidad.</p>
 
 							<div class="row">
 								<div class="col-4 col-12-mobile">
 									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic02.jpg" alt="" /></a>
+										<a href="#" class="image fit">
+											<!-- <img src="images/pic02.jpg" alt="" /> -->
+											<img src="images/Barter_Change.jpg" alt="" />
+										</a>
 										<header>
-											<h3>en construccion</h3>
+											<h3>Barter Change</h3>
 										</header>
 									</article>
 									<article class="item">
 										<a href="#" class="image fit"><img src="images/pic03.jpg" alt="" /></a>
 										<header>
-											<h3>en construccion</h3>
+											<h3>4 seccion</h3>
 										</header>
 									</article>
 								</div>
 								<div class="col-4 col-12-mobile">
 									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic04.jpg" alt="" /></a>
+										<a href="#" class="image fit"><img src="images/token_app.png" alt="" /></a>
 										<header>
-											<h3>en construccion</h3>
+											<h3>Barter Token</h3>
 										</header>
 									</article>
 									<article class="item">
 										<a href="#" class="image fit"><img src="images/pic05.jpg" alt="" /></a>
 										<header>
-											<h3>en construccion</h3>
+											<h3>Seccion 5</h3>
 										</header>
 									</article>
 								</div>
 								<div class="col-4 col-12-mobile">
 									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic06.jpg" alt="" /></a>
+										<a href="#" class="image fit"><img src="images/Barter_pagos.jpg" alt="" /></a>
 										<header>
-											<h3>en construccion</h3>
+											<h3>Barter Pagos</h3>
 										</header>
 									</article>
 									<article class="item">
@@ -138,13 +187,10 @@
 								<h2>Sobre Me</h2>
 							</header>
 
-							<a href="#" class="image featured"><img src="images/pic08.jpg" alt="" /></a>
+							<a href="#" class="image featured"><img src="images/background-app.png" alt="" /></a>
 
-							<p>en construccion en construccion en construccion en construccion en construccion
-								en construccion en construccion en construccion en construccionen construccion 
-								en construccion en construccion v en construccion en construccion en construccion 
-								en construccion en construccion en construccion en construccion en construccion 
-								en construccion en construccion en construccion en construccion en construccion .</p>
+							<p> Un Tranquilo ser vivo mas, con ambición de una innovación constante, para lograr un mejor mañana,
+								nada es imposible para un corazon dispuesto.</p>
 
 						</div>
 					</section>
@@ -157,21 +203,22 @@
 								<h2>Contacto</h2>
 							</header>
 
-							<p>en construccion en construccionen construccionen construccion en construccion 
-								en construccionen construccionen construccionen construccionen construccion en construccion 
-								en construccionven construccion en construccion en construccion v v en construccion
-								en construccion en construccion ven construccionen construccion v v en construccion
-								en construccion en construccionen construccionv en construccion en construccion.</p>
+							<p>	Recuerda para mi tu información es muy importante, tu idea estara segura, podemos firmar lo que
+								sea necesario.</p>
 
 							<form method="post" action="#">
 								<div class="row">
-									<div class="col-6 col-12-mobile"><input type="text" name="name" placeholder="Name" /></div>
-									<div class="col-6 col-12-mobile"><input type="text" name="email" placeholder="Email" /></div>
+									<div class="col-6 col-12-mobile">
+										<input type="text" name="name" id="name" placeholder="Name" /></div>
+									<!-- <div class="col-6 col-12-mobile">
+										<input type="text" name="email" id="email" placeholder="Email" /></div> -->
 									<div class="col-12">
-										<textarea name="message" placeholder="Message"></textarea>
+										<textarea name="message" id="message" placeholder="Message"></textarea>
 									</div>
 									<div class="col-12">
-										<input type="submit" value="Send Message" />
+										<a class="button" href="mailto:ings.ivandiaz@gmail.com?subject=Consulta%20Software&body=Escribe%20tu%20solicitud%20aqui" id="send_smg">
+											Enviar Mensaje</a>
+										<!-- <input type="submit" value="Send Message" id="send_smg" /> -->
 									</div>
 								</div>
 							</form>
@@ -186,7 +233,7 @@
 
 				<!-- Copyright -->
 					<ul class="copyright">
-						<li>&copy; TIDIAZ. All rights reserved 2022.</li>
+						<li id="copyright">&copy; TIDIAZ. All rights reserved 2022.</li>
 					</ul>
 
 			</div>
