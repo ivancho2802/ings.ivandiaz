@@ -2626,3 +2626,18 @@ input, select, textarea {
 				}
 
 	}
+	.zoomhover, .zoomhover1, .zoomhover2, .zoomhover3{
+		transition: transform .2s; /* Animation */
+	}
+	.zoomhover1:hover {
+		transform: scale(2) translate3d(20%, 25%, 0);
+	}
+	.zoomhover2:hover {
+		transform: scale(2) translate3d(20%, 25%, 0);
+	}
+	.zoomhover3:hover {
+		transform: scale(1.5) translate3d(20%, 0, 0);
+	}
+	.zoomhover:hover {
+		transform: scale(2) translate3d(-20%, 25%, 0);
+	}
