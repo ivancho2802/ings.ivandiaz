@@ -2626,8 +2626,11 @@ input, select, textarea {
 				}
 
 	}
-	.zoomhover, .zoomhover1, .zoomhover2, .zoomhover3{
+	.zoomhover, .zoomhover1, .zoomhover2, .zoomhover3, .zoomhover4, .zoomhover5{
 		transition: transform .2s; /* Animation */
+	}
+	.zoomhover:hover {
+		transform: scale(2) translate3d(-20%, 25%, 0);
 	}
 	.zoomhover1:hover {
 		transform: scale(2) translate3d(20%, 25%, 0);
@@ -2638,6 +2641,13 @@ input, select, textarea {
 	.zoomhover3:hover {
 		transform: scale(1.5) translate3d(20%, 0, 0);
 	}
-	.zoomhover:hover {
-		transform: scale(2) translate3d(-20%, 25%, 0);
+	.zoomhover4:hover {
+		transform: scale(2) translate3d(0, -20%, 0);
 	}
+	.zoomhover5:hover {
+		transform: scale(2) translate3d(-25%, 0%, 0);
+	}
+	.carousel-item-image{
+		margin: auto;
+	}
+	
