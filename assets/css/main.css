@@ -2668,7 +2668,8 @@ input, select, textarea {
 .shape{
 	background: #fff;
 	border-color: #222629;
-    margin: 20% 6% 0%
+    margin: 20% 6% 0%;
+	box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 3px 6px 0 rgb(0 0 0 / 20%);
   }
   
 /*Hexágono*/
