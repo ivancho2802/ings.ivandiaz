@@ -2693,6 +2693,7 @@ input, select, textarea {
 	border-left: 100px solid transparent;
 	border-right: 100px solid transparent;
 	border-bottom: 50px solid #fff;
+    filter: drop-shadow(0px -5px 5px #ccc);
 }
 .hexagono:after {
 	content: "";
@@ -2704,4 +2705,5 @@ input, select, textarea {
 	border-left: 100px solid transparent;
 	border-right: 100px solid transparent;
 	border-top: 50px solid #fff;
+    filter: drop-shadow(0px 5px 5px #ccc);
 }
