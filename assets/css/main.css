@@ -2707,3 +2707,6 @@ input, select, textarea {
 	border-top: 50px solid #fff;
     filter: drop-shadow(0px 5px 5px #ccc);
 }
+a:hover{
+	text-decoration: none !important;
+}
