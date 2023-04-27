@@ -2710,3 +2710,7 @@ input, select, textarea {
 a:hover{
 	text-decoration: none !important;
 }
+
+.td-icon{
+    width: 30px;
+}
