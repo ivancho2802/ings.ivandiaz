@@ -29,3 +29,6 @@ Linux 
 AWS EC2, S3 
 Docker 
 Nest.js 
+react-native
+Android-studio
+switf
