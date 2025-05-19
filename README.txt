@@ -32,3 +32,4 @@ Nest.js 
 react-native
 Android-studio
 switf
+python
