@@ -1,0 +1,13 @@
+stages:
+  - preview
+
+pages:
+  stage: preview
+  script:
+    # Creamos una carpeta llamada public y movemos todo ahí
+    - mkdir public
+    - cp -r *.html *.css *.js public/
+  artifacts:
+    paths:
+      - public
+    expire_in: 1 hour # Opcional: para no saturar el almacenamiento
